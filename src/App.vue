@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HeaderPage />
+  <main>
+    <HomePage />
+    <MarqueePage text="PROYECTOS SELECCIONADOS"/>
+    <ProjectsPage />
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderPage from './components/Header.vue'
+import HomePage from './components/Home.vue'
+import MarqueePage from './components/Marquee.vue'
+import ProjectsPage from './components/Projects.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    HomePage,
+    HeaderPage,
+    MarqueePage,
+    ProjectsPage
+  },
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss" scoped>
 </style>

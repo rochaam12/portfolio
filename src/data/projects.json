@@ -1,0 +1,123 @@
+[
+    {
+        "name": "Mi Kiosko 5",
+        "type": ["UI/UX Redesign", "Frontend Development", "Mobile"],
+        "framework": "Ionic/Angular",
+        "date": "2021",
+        "clients": [{"name": "Feedbak", "url": "https://www.feedbakmx.com/"}],
+        "description" : ["Mi Kiosko is a human resources platform used for many companies in the north of mexico, it gives employees a mobile application to look up their payroll receipts, send and request work letters, see their available vacations and more functionalities designed for the client needs. Also the platform provides dashboard to manage employees, aproove or decline letter requests, etc."],
+        "case": "The task given was to redesign a newer version for Mi Kiosko's UI, added to that, it was necessary to update the version of the used framework, which ended up with a development from the ground up.",
+        "before": {
+            "title": "The current state of the application was funtional, but there were some problems that needed to be solved with this update.",
+            "text": [
+                "No standard frontend code, css optimization and class naming rules",
+                "There was no implementation of components",
+                "UI was inconsistent",
+                "Very outdated framework version"
+            ],
+            "images": [
+                "projects/kiosko/1.png",
+                "projects/kiosko/2.png",
+                "projects/kiosko/3.png"
+            ],
+            "imageRatio": "vertical"
+        },
+        "after":{
+            "title": "The solution process went with many stages, leading up to a carefully built code and much smaller component sizes.",
+            "text": [
+                "First stage working in the UI redesign was <b>paper sketching</b> and feedback from users, and using the best practices for a smoother interaction.",
+                "The Second stage was <b>research</b>, with this I started learning more in depth about the Ionic framework and the best practices for it.",
+                "Third stage was the <b>development</b> of the UI, this took place for several weeks. In this stage the class naming rules were creted, a more solid image for the platform was made and animations were implemented.",
+                "Finally, the <b>delivery</b> was made in a small presentation with the development team, having more feedback and polishing the final redesign."
+            ],
+            "images": [
+                "projects/kiosko/4.png",
+                "projects/kiosko/5.png",
+                "projects/kiosko/6.png"
+            ],
+            "imageRatio": "vertical"
+        },
+        "achievements": [
+            "First official UI framework for Feedbak (I called it FeedUI)"
+        ]
+    },
+    {
+        "name": "Taskin",
+        "date": "2022",
+        "type": ["UI/UX", "Frontend Development", "Web"],
+        "framework": "Angular",
+        "clients": [{"name": "Feedbak", "url": "https://www.feedbakmx.com/"}],
+        "description" : ["Taskin is a platform made for management and tracking of tasks, clients and contracts for many type of clients, it has a mbile app to upload, manage and approve the tickets in the dashboard."],
+        "case": "This platform was made from scratch, of course having references from other products, the main challenge was the core feature needed for this project: a table that can be customized, have data types, options, status tracking, filtering, etc. all dynamically.",
+        "before": {
+            "title": "There was no initial state of the project.",
+            "text": [
+                "With no starting point in this project, so I went straightforward to develop the main features and building a UI look around it."
+            ],
+            "images": [
+            ],
+            "imageRatio": "horizontal"
+        },
+        "after":{
+            "title": "Development of the project.",
+            "text": [
+                "First stage was <b>research</b> for thechnology obstacles and features that I may have encounter or need in the process of development.",
+                "The second step was to <b>develop</b> the main table component, with column types and a dynamic global dropdown",
+                "Along the second step was the <b>UI design</>, which included finding a color palette, and polishing the style system in the template we had set up.",
+                "Finally, my <b>delivery</b> was presented with the team, explaining the main table functionality and the views that were required for the start of the project."
+            ],
+            "images": [
+                "projects/taskin/1.jpeg"
+            ],
+            "imageRatio": "horizontal"
+        },
+        "achievements": [
+            "A table system that were implemented among the subsequent projects",
+            "The fisrt stable web template for our development team"
+        ]
+    },
+    {
+        "name": "Maghni AI",
+        "date": "2023",
+        "type": ["UI/UX", "Frontend Development", "Desktop"],
+        "framework": "VueJS",
+        "clients": [{"name": "Misbah Studios", "url": "https://www.facebook.com/MisbahStudios"}, {"name": "VocaTOne Studio", "url": "https://www.vocatone.studio/"}],
+        "description" : [
+            "Maghni AI is a voice synthesizer the uses AI technology, focused on singing, language preservation and ethical AI.",
+            "As a background for this project, I have been involved and working on the technology, music and community that the voice synthesis softwares have since 2012, and after getting into UI/UX development, it was a goal of mine to develop an interface for a product like this. I was gladly contacted from a member of the Maghni AI team and got to work in this project.",
+            "This is still in active development as of 2024, though it doesn't interrupt my main tasks and resposibilities."
+        ],
+        "case": "The challenge was to develop a new UI for the software, being fresh, intuitive and modern. Initially, the frontend was going to be coded in JUCE, a C++ framework for audio plugins, but later on the team decided to change to Vue + Tauri + Rust, for a cross-platform support and lighter app size.",
+        "before": {
+            "title": "The first version of the app was built on JUCE, with a pretty basic UI, mostly testing and simple functionality, but not a very pleasing look as none of the team members before me was dedicated to frontend.",
+            "text": [
+                "The first image shows the first version of the UI that I saw.",
+                "Something different in the process of this project is that I already had some explorations, so I made a prototype on Vue to show and see if the team liked the new direcion. (Image 2)",
+                "After the prototype was accepted, it went through some cycles that improved the look, and frontend structure. For example, the third image is the last stage before the current version."
+            ],
+            "images": [
+                "projects/maghni/1.png",
+                "projects/maghni/2.png",
+                "projects/maghni/3.png"
+            ],
+            "imageRatio": "horizontal"
+        },
+        "after":{
+            "title": "Current version is now more stable, cleaner and has got much better. We think it will be the last major evolution.",
+            "text": [
+                "The approach for this UI is using a more native look, so the app feels more integrated with the OS, and obtain a more timeless feel because we stick to a design language that won't change too often.",
+                "The workspace area is mean to have the most screen space used, with the sufficient tools at hand and secondary functionality in other menus.",
+                "Went for a light and dark themes, with monochromatic background to use the primary and secondary color for accents. User customization is also possible and, very importantly, a requirement.",
+                "The side menu will have tab navigation, options for the current workspace (Home, Editor, Export, and more to come) and a card banner for important current information."
+            ],
+            "images": [
+                "projects/maghni/4.png",
+                "projects/maghni/5.png"
+            ],
+            "imageRatio": "horizontal"
+        },
+        "achievements": [
+            "First audio/music related UI project"
+        ]
+    }
+]

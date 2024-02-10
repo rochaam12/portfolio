@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@700&family=Mukta:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@400;700;800&family=Open+Sans:wght@400;500;700&display=swap');
+
+:root{
+    --primary: #3355c2;
+    --black: #222428;
+    --white: #eaeaee;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--black);
+    background-color: var(--white);
+    text-align: center;
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+.bg-white{
+    color: var(--black);
+    background-color: var(--white);
+}
+.bg-dark{
+    color: var(--white);
+    background-color: var(--black);
+}
+.bg-primary{
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.font-title{
+    font-family: 'Gabarito', sans-serif !important;
+}
+
+*{
+    box-sizing: border-box;
+
+    ::-webkit-scrollbar{
+        width: 0;height: 0;
+    }
+}
+
+.text-primary{
+    color: var(--primary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: fit-content;
+
+    &::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: var(--primary);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        transition: width .3s;
+    }
+    &:hover, &.line{
+        &::after{width: 100%;}
+    }
+
+    &.active{color: var(--primary);}
+}
+p{line-height: 2;}
+
+section{
+    &.padding{
+        padding: 80px 0;
+    }
+}
+.card{
+    width: 100%;
+    padding: 1em;
+    border-radius: 20px;
+}
+
+@keyframes marquee {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}

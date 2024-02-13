@@ -94,11 +94,45 @@ section{
     border-radius: 20px;
 }
 
+.loader{
+    width: 100vw;
+    height: 0vh;
+    position: fixed;
+    top: 0;left: 0;
+    background-color: var(--black);
+    color: var(--white);
+    z-index: 1000;
+    transition: height .3s;
+    display: flex;
+    font-size: 1.2em;
+    overflow: hidden;
+
+    span{
+        display: block;
+        font-size: 4em;
+        animation-name: spin;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
+
+    &.open{
+        height: 100vh;
+    }
+}
+
 @keyframes marquee {
     0% {
         left: 0;
     }
     100% {
         left: -100%;
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }

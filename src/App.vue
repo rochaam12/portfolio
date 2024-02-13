@@ -1,4 +1,12 @@
 <template>
+
+  <div class="loader" :class="{open: isLoading}">
+    <div class="m-a">
+      <span>&#x21bb;</span>
+      <p>Loading...</p>
+    </div>
+  </div>
+
   <HeaderPage :isWeb="isWeb"/>
   <main>
     <HomePage />
@@ -52,9 +60,17 @@ export default {
     ProjectCard,
     FooterPage
   },
+  data(){
+    return {
+      isLoading: true,
+    }
+  },
   computed: {
     isWeb(){return window.innerWidth > 400;}
   },
+  created(){
+    this.isLoading = false;
+  }
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
     <section class="scrolling-band bg-primary">
         <div class="marquee font-title">
-            <div class="wrapper">
+            <div class="wrapper text-xxl">
                 <div><h1>{{ text }}</h1></div>
                 <div><h1>{{ text }}</h1></div>
             </div>
@@ -20,7 +20,6 @@ export default {
 
 <style lang="scss" scoped>
     .scrolling-band{
-        font-size: 4.5vw;
         overflow: hidden;
         white-space: nowrap;
         h1{margin: 0;  line-height: 1; font-style: italic; font-weight: 900;}

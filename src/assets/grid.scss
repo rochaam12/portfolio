@@ -28,6 +28,9 @@
 .ta-r{text-align: right;}
 .ta-c{text-align: center;}
 
+.ov-a{overflow: auto;}
+.ov-h{overflow: hidden;}
+
 @for $i from 1 through 12{
     .col-#{$i}{
         padding: 0px 10px;

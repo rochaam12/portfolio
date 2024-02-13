@@ -1,18 +1,18 @@
 <template>
     <section class="splash" id="home">
         <div class="container-fluid mt-a">
-            <h1 class="font-title"><b>Soy Miguel</b></h1>
-            <h3 class="text-primary">Ingeniero en software_Desarrollador de UI/UX <!-- Productor musical --></h3>
+            <h1 class="font-title"><b>I'm Miguel</b></h1>
+            <h3 class="text-primary">Software engineer, UI/UX Developer <!-- Productor musical --></h3>
         </div>
         <div class="container-fluid">
             <img src="yo.svg" alt="Dibujo de Miguel" class="hero" width="500">
         </div>
-        <div class="scroll-help">Desliza para ver mas <span class="text-primary">&#x2935;</span></div>
+        <div class="scroll-help">Scroll to see more <span class="text-primary">&#x2935;</span></div>
     </section>
     <section class="about padding bg-dark" id="about">
         <div class="container">
-            <h2>Soy un desarrollador de <b class="text-primary">UI/UX</b> que le interesa encontrar la manera mas eficiente de crear las mejores experiencias.</h2>
-            <p>Me considero alguien que piensa de forma logica, sin embargo me desarollo mucho en el mundo artistico desde toda mi vida; esto me ha dado un gusto especial por el diseno, ya que me ha permitido explorar las diferentes formas en la que se puede interactuar con un usuario y al mismo tiempo buscar la eficiencia en el desarrollo y mantenimiento.</p>
+            <h2>I'm a <b class="text-primary">UI/UX</b> developer that's interested in finding themost efficient way to create the best experiences.</h2>
+            <p>I consider myself as someone that thinks in a logical way, but also I develop myself in the artistic world since I can remember; that has made me more of a design developer, and such thing has eprmitted me to explore the different ways in which we can interact with the user and at the same time develop in a fast and efiient way.</p>
         </div>
     </section>
 </template>

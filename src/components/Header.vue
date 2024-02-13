@@ -14,11 +14,11 @@
                   </template>
                 </ul>
               </nav>
-              <div class="language">
+              <!-- <div class="language">
                 <div class="language-option" :class="{active: activeLang == 'es'}"><img src="flags/mexico.svg" alt="Option for Spanish website"></div>
                 <div class="language-option" :class="{active: activeLang == 'en'}"><img src="flags/united_states.svg" alt="Option for English website"></div>
                 <div class="language-option" :class="{active: activeLang == 'jp'}"><img src="flags/japan.svg" alt="Option for Japanese website"></div>
-              </div>
+              </div> -->
             </div>
           </div>
         </template>
@@ -30,6 +30,7 @@
 <script>
 export default {
   name: 'HeaderPage',
+  props: ['isWeb'],
   data() {
     return {
       tabs: [
@@ -42,19 +43,17 @@ export default {
       activeLang: 'es',
     }
   },
-  computed: {
-    isWeb(){return window.innerWidth > 320;}
-  },
   methods: {
     goTo(id){
-      document.querySelector(`#${id}`).scrollIntoView({behavior: 'smooth'});
+      this.activeSection = id;
+      try{document.querySelector(`#${id}`).scrollIntoView({behavior: 'smooth'});}catch(e){console.log(e);}
     },
     getTabName(id){
       const names = {
-        home: 'Inicio',
-        about: 'Sobre Mi',
-        projects: 'Proyectos',
-        contact: 'Contacto'
+        home: 'Home',
+        about: 'About',
+        projects: 'Projects',
+        contact: 'Contact'
       }
 
       return names[id] || id;

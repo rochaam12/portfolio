@@ -4,8 +4,10 @@
         "type": ["UI/UX Redesign", "Frontend Development", "Mobile"],
         "framework": "Ionic/Angular",
         "date": "2021",
+        "thumbnail" : "projects/kiosko/thumbnail.png",
+        "background": "linear-gradient(45deg, #bcdba6  35%, #498f1b)",
         "clients": [{"name": "Feedbak", "url": "https://www.feedbakmx.com/"}],
-        "description" : ["Mi Kiosko is a human resources platform used for many companies in the north of mexico, it gives employees a mobile application to look up their payroll receipts, send and request work letters, see their available vacations and more functionalities designed for the client needs. Also the platform provides dashboard to manage employees, aproove or decline letter requests, etc."],
+        "description" : ["<b>Mi Kiosko</b. is a human resources platform used for many companies in the north of mexico, it gives employees a mobile application to look up their payroll receipts, send and request work letters, see their available vacations and more functionalities designed for the client needs. Also the platform provides dashboard to manage employees, aproove or decline letter requests, etc."],
         "case": "The task given was to redesign a newer version for Mi Kiosko's UI, added to that, it was necessary to update the version of the used framework, which ended up with a development from the ground up.",
         "before": {
             "title": "The current state of the application was funtional, but there were some problems that needed to be solved with this update.",
@@ -20,7 +22,7 @@
                 "projects/kiosko/2.png",
                 "projects/kiosko/3.png"
             ],
-            "imageRatio": "vertical"
+            "colSize": "4"
         },
         "after":{
             "title": "The solution process went with many stages, leading up to a carefully built code and much smaller component sizes.",
@@ -35,7 +37,7 @@
                 "projects/kiosko/5.png",
                 "projects/kiosko/6.png"
             ],
-            "imageRatio": "vertical"
+            "colSize": "4"
         },
         "achievements": [
             "First official UI framework for Feedbak (I called it FeedUI)"
@@ -44,10 +46,12 @@
     {
         "name": "Taskin",
         "date": "2022",
+        "thumbnail" : "projects/taskin/thumbnail.png",
+        "background": "linear-gradient(45deg, #b8cff3  35%, #05199e)",
         "type": ["UI/UX", "Frontend Development", "Web"],
         "framework": "Angular",
         "clients": [{"name": "Feedbak", "url": "https://www.feedbakmx.com/"}],
-        "description" : ["Taskin is a platform made for management and tracking of tasks, clients and contracts for many type of clients, it has a mbile app to upload, manage and approve the tickets in the dashboard."],
+        "description" : ["<b>Taskin</b> is a platform made for management and tracking of tasks, clients and contracts for many type of clients, it has a mbile app to upload, manage and approve the tickets in the dashboard."],
         "case": "This platform was made from scratch, of course having references from other products, the main challenge was the core feature needed for this project: a table that can be customized, have data types, options, status tracking, filtering, etc. all dynamically.",
         "before": {
             "title": "There was no initial state of the project.",
@@ -67,9 +71,11 @@
                 "Finally, my <b>delivery</b> was presented with the team, explaining the main table functionality and the views that were required for the start of the project."
             ],
             "images": [
-                "projects/taskin/1.jpeg"
+                "projects/taskin/1.jpeg",
+                "projects/taskin/2.jpeg",
+                "projects/taskin/3.jpeg"
             ],
-            "imageRatio": "horizontal"
+            "colSize": "12"
         },
         "achievements": [
             "A table system that were implemented among the subsequent projects",
@@ -79,11 +85,13 @@
     {
         "name": "Maghni AI",
         "date": "2023",
+        "thumbnail" : "projects/maghni/thumbnail.png",
+        "background": "linear-gradient(45deg, #f6dfff  35%, #cb1a6f)",
         "type": ["UI/UX", "Frontend Development", "Desktop"],
         "framework": "VueJS",
         "clients": [{"name": "Misbah Studios", "url": "https://www.facebook.com/MisbahStudios"}, {"name": "VocaTOne Studio", "url": "https://www.vocatone.studio/"}],
         "description" : [
-            "Maghni AI is a voice synthesizer the uses AI technology, focused on singing, language preservation and ethical AI.",
+            "<b>Maghni AI</b> is a voice synthesizer the uses AI technology, focused on singing, language preservation and ethical AI.",
             "As a background for this project, I have been involved and working on the technology, music and community that the voice synthesis softwares have since 2012, and after getting into UI/UX development, it was a goal of mine to develop an interface for a product like this. I was gladly contacted from a member of the Maghni AI team and got to work in this project.",
             "This is still in active development as of 2024, though it doesn't interrupt my main tasks and resposibilities."
         ],
@@ -100,7 +108,7 @@
                 "projects/maghni/2.png",
                 "projects/maghni/3.png"
             ],
-            "imageRatio": "horizontal"
+            "colSize": "12"
         },
         "after":{
             "title": "Current version is now more stable, cleaner and has got much better. We think it will be the last major evolution.",
@@ -111,10 +119,9 @@
                 "The side menu will have tab navigation, options for the current workspace (Home, Editor, Export, and more to come) and a card banner for important current information."
             ],
             "images": [
-                "projects/maghni/4.png",
-                "projects/maghni/5.png"
+                "projects/maghni/4.png"
             ],
-            "imageRatio": "horizontal"
+            "colSize": "12"
         },
         "achievements": [
             "First audio/music related UI project"

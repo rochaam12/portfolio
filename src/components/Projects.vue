@@ -1,19 +1,15 @@
 <template>
-        <section class="projects padding" id="projects">
+        <section class="projects" :class="{padding: isWeb}" id="projects">
             <div class="container">
-                <template v-for="card in projectList" v-bind:key="card">
-                    <div class="card bg-dark">
+                <template v-for="(card, i) in projectList" v-bind:key="card">
+                    <div class="item" :style="{background: card.background}" @click="setProject(getProject(i))">
+                        <div class="thumbnail"><img :src="card.thumbnail" alt=""></div>
                         <div class="data">
-                            <h2 class="mt-0 mb-0 font-title">{{ card.name }}</h2>
-                            <p class="mt-0 mb-0">{{ card.date }}, {{ card.framework }}</p>
+                            <h1 class="mt-0 mb-0 font-title">{{ card.name }}</h1>
                             <div class="tags">
                                 <span class="bg-primary" v-for="tag in card.types" v-bind:key="tag">{{ tag }}</span>
                             </div>
-                        </div>
-                        <div class="thumbnail">
-                            <div class="frame" :class="card.thumbnailRatio">
-                                <img :src="card.thumbnail" alt="">
-                            </div>
+                            <p class="mt-0 mb-0"><span class="bg-dark">View Case &nbsp; &#8594;</span></p>
                         </div>
                     </div>
                 </template>
@@ -23,14 +19,20 @@
 
 
 <script>
-// import ProjectCard from './ProjectCard.vue'
-
+import {inject} from 'vue';
 import projects from '../data/projects.json'
 
 export default {
   name: 'ProjectsPage',
+  setup(){
+    const setProject = inject('setProject');
+
+    // setProject(projects[0]);
+
+    return {setProject};
+  },
+  props: ['isWeb'],
   components: {
-    // ProjectCard
   },
   computed: {
     projectList(){
@@ -42,35 +44,48 @@ export default {
             date: el.date,
             types: el.type,
             framework: el.framework,
-            thumbnail: el.after.images[0] || el.before.images[0] || null,
-            thumbnailRatio: el.after.imageRatio || el.before.imageRatio
+            thumbnail: el.thumbnail || el.after.images[0] || el.before.images[0] || null,
+            background: el.background,
            };
-
-           console.log(item);
-
            list.push(item);
         });
 
         return list;
     }
+  },
+  methods:{
+    getProject(i){return projects[i] || {}}
   }
 }
 </script>
 
 
 <style lang="scss" scoped>
-    .card{
+    .item{
         display: flex;
-        padding: 0;
+        position: relative;
+        background-color: #aaa1;
+        cursor: pointer;
         overflow: hidden;
-        
-        &:not(:last-child){margin-bottom: 2em;}
+
+        &:not(:last-child){margin-bottom: 4em;}
 
         .data{
             text-align: left;
-            flex: 1;
-            padding: 2em;
+            width: 50%;
+            padding: 14em 2em 4em;
             margin: auto 0;
+            order: 1;
+
+            h1{
+                display: block;
+                width: 100%;
+                font-size: 4em;
+                position: relative;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
 
             .tags{
                 span{
@@ -78,47 +93,68 @@ export default {
                     font-size: .8em;
                     padding: 4px 10px;
                     border-radius: 6px;
-                    margin: 4px 4px 0 0;
+                    margin: 4px 4px 1em 0;
+                }
+            }
+
+            p{
+                margin-top: .5em;
+                span{
+                    border-radius: 6px;
+                    padding: 10px 1.4em;
+                    position: relative;
+                    left: 0;
+                    transition: .3s;
                 }
             }
         }
 
         .thumbnail{
-            width: 340px;
-            max-width: 100%;
-            display: flex;
-            flex-direction: column;
-            height: 180px;
-            .frame{
-                margin: auto auto 0;
-                height: auto;
-                flex: 1;
-                border-radius: 22px 22px 0 0;
-                border: 6px solid #000;
-                border-width: 12px 12px 0;
-                background-color: var(--white);
-                overflow: hidden;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+            order: 3;
+            
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 80%;
+            height: 100%;
 
-                transform: translateY(30px);
-                transition: .3s;
-
-                &.horizontal{width: 90%;}
-                &.vertical{width: 70%;}
-
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: top;
-                }
-            }
+            img{width: 100%;height: 100%; object-fit: contain; object-position: center; transform: scale(1.25); transform-origin: left top;}
         }
-        
+
         &:hover{
             cursor: pointer;
-            // background-color: #6661;
+            background-color: #aaa1;
 
-            .thumbnail .frame{transform: translateY(10px);}
+            p span{left: 30px;}
+
+            .thumbnail {transform: translateX(0px); opacity: 1;}
+        }
+    }
+
+    @media (max-width: 380px) {
+        .item{
+            flex-direction: column;
+            
+            &:not(:last-child){margin-bottom: 1em !important;}
+
+            .data{
+                order: 3;
+                width: 100%;
+                padding: 1em 1em 1em !important;
+                background-color: var(--white);
+
+                h1{
+                    font-size: 2.4em;
+                }
+                .tags{
+                    font-size: .8em;
+                }
+            }
+
+            .thumbnail{position: relative; width: 100%;height: 100%; img{transform: none;}}
         }
     }
 </style>
